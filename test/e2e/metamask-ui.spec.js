@@ -89,6 +89,13 @@ describe('MetaMask', function () {
 
     let seedPhrase;
 
+    it('renders the seed phrase intro screen', async function () {
+      await driver.clickElement(
+        By.css('.seed-phrase-intro__next-wrapper button'),
+      );
+      await driver.delay(regularDelayMs);
+    });
+
     it('reveals the seed phrase', async function () {
       const byRevealButton = By.css(
         '.reveal-seed-phrase__secret-blocker .reveal-seed-phrase__reveal-button',
